@@ -11,6 +11,10 @@ jobs:
         with:
           deno-version: vx.x.x
         run: deno run -A https://deno.land/x/lume/ci.ts
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 8502b43387a8eed0af641cba43aee48db8042725
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
