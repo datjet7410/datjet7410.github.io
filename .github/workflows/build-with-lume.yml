@@ -1,7 +1,7 @@
 name: build-with-lume
 on: [push]
 jobs:
-  Build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Build
@@ -9,7 +9,7 @@ jobs:
         with:
           deno-version: vx.x.x
         run: deno run -A https://deno.land/x/lume/ci.ts
-        
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
