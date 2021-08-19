@@ -1,1 +1,45 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to my page</title>
+    <script type="module">
+  import {createApp} from 'https://unpkg.com/petite-vue@0.2.3/dist/petite-vue.es.js'
+  function Counter() {
+    return {
+      $template: "#counter-template",
+      count: 0,
+
+      get plusOne() {
+        return this.count + 1
+      },
+
+      increment() {
+        this.count++
+      }
+    }
+  }
+  createApp({Counter}).mount()
+</script>
+
+  <template id="counter-template">
+    <p>{{ count }}</p>
+    <p>{{ plusOne }}</p>
+    <button @click="increment">increment</button>
+  </template>
+
+
+  </head>
+
+  <body>
+    <main>
+<div v-scope="Counter()"></div>
+      
+    <h1>Welcome to my page</h1>
+    <a href="/admin/#">admin</a>
+
+
+    </main>
+  </body>
+</html>
