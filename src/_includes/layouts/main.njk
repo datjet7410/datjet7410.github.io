@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    {% include "components/counter.njk" %}
+
+  </head>
+
+  <body>
+    <main>
+<div v-scope="Counter()"></div>
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
